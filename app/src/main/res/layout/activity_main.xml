@@ -27,12 +27,42 @@
         android:layout_below="@+id/Num1"
         android:hint="Segundo número" />
 
+
     <Button
+        android:id="@+id/somar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calcular"
-        android:id="@+id/calcular"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/Num2"
-        android:layout_centerHorizontal="true"
-        android:onClick="calcular" />
+        android:layout_marginStart="44dp"
+        android:onClick="somar"
+        android:text="Somar" />
+
+    <Button
+        android:id="@+id/multiplicar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/Num2"
+        android:layout_below="@+id/Num2"
+        android:layout_marginEnd="68dp"
+        android:onClick="multiplicar"
+        android:text="Multiplicar" />
+
+    <Button
+        android:id="@+id/subtrair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/somar"
+        android:layout_below="@+id/somar"
+        android:onClick="subtrair"
+        android:text="Subtrair" />
+
+    <Button
+        android:id="@+id/dividir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/multiplicar"
+        android:layout_alignTop="@+id/subtrair"
+        android:onClick="dividir"
+        android:text="Dividir" />
 </RelativeLayout>

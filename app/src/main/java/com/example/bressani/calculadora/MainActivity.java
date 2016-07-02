@@ -14,11 +14,53 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void calcular(View view) {
+    public void somar(View view) {
         TextView num1 = (TextView) findViewById(R.id.Num1);
         TextView num2 = (TextView) findViewById(R.id.Num2);
 
         double resultado = Double.parseDouble(num1.getText().toString()) + Double.parseDouble(num2.getText().toString());
+
+        AlertDialog.Builder dialogo = new AlertDialog.Builder(MainActivity.this);
+
+        dialogo.setTitle("Resultado");
+        dialogo.setMessage("O resultado é " + resultado);
+        dialogo.setNeutralButton("Ok", null);
+        dialogo.show();
+    }
+
+    public void subtrair(View view) {
+        TextView num1 = (TextView) findViewById(R.id.Num1);
+        TextView num2 = (TextView) findViewById(R.id.Num2);
+
+        double resultado = Double.parseDouble(num1.getText().toString()) - Double.parseDouble(num2.getText().toString());
+
+        AlertDialog.Builder dialogo = new AlertDialog.Builder(MainActivity.this);
+
+        dialogo.setTitle("Resultado");
+        dialogo.setMessage("O resultado é " + resultado);
+        dialogo.setNeutralButton("Ok", null);
+        dialogo.show();
+    }
+
+    public void multiplicar(View view) {
+        TextView num1 = (TextView) findViewById(R.id.Num1);
+        TextView num2 = (TextView) findViewById(R.id.Num2);
+
+        double resultado = Double.parseDouble(num1.getText().toString()) * Double.parseDouble(num2.getText().toString());
+
+        AlertDialog.Builder dialogo = new AlertDialog.Builder(MainActivity.this);
+
+        dialogo.setTitle("Resultado");
+        dialogo.setMessage("O resultado é " + resultado);
+        dialogo.setNeutralButton("Ok", null);
+        dialogo.show();
+    }
+
+    public void dividir(View view) {
+        TextView num1 = (TextView) findViewById(R.id.Num1);
+        TextView num2 = (TextView) findViewById(R.id.Num2);
+
+        double resultado = Double.parseDouble(num1.getText().toString()) / Double.parseDouble(num2.getText().toString());
 
         AlertDialog.Builder dialogo = new AlertDialog.Builder(MainActivity.this);
 
